@@ -79,6 +79,8 @@ PLATFORMS
 
 DEPENDENCIES
   activesupport
+  faraday
+  jwt
   omniauth
   omniauth-google-oauth2
   rack

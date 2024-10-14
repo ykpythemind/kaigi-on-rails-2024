@@ -3,8 +3,10 @@
 source "https://rubygems.org"
 
 gem "activesupport"
-gem "rack"
-gem "rackup"
-gem "rack-session"
+gem "faraday"
+gem "jwt"
 gem "omniauth"
 gem "omniauth-google-oauth2"
+gem "rack"
+gem "rack-session"
+gem "rackup"

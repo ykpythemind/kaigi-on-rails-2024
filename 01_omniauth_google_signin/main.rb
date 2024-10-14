@@ -38,8 +38,9 @@ app = Rack::Builder.new do
       HTML
     when "/auth/google_oauth2/callback"
       auth_hash = request.env["omniauth.auth"].to_h # omniauthを経由して認証した結果を取得
+      puts "**** auth_hash ****\n#{auth_hash}"
 
-      [200, {}, [html(auth_hash)]]
+      [200, {}, [html("hello #{auth_hash["info"]["name"]}")]]
     else
       [400, {}, [html("unexpected request to #{request.fullpath}")]]
     end
