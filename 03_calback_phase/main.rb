@@ -28,7 +28,7 @@ app = Rack::Builder.new do
       auth_url = "https://accounts.google.com/o/oauth2/auth?#{query.to_query}"
 
       [301, {'Location' => auth_url, 'Content-Type' => 'text/html'}, ['Moved Permanently']]
-    when /\/auth\/google_oauth2\/callback/
+    when "/auth/google_oauth2/callback"
       client = Faraday.new { _1.request(:url_encoded) }
 
       response = client.post("https://oauth2.googleapis.com/token") do |req|
