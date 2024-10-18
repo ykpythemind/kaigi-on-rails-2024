@@ -1,6 +1,7 @@
 # Kaigi on Rails 2024
 
-[OmniAuthから学ぶOAuth2.0](https://kaigionrails.org/2024/talks/ykpythemind/) の資料
+- [OmniAuthから学ぶOAuth2.0](https://kaigionrails.org/2024/talks/ykpythemind/) の資料
+- サンプル動画 https://www.youtube.com/watch?v=4TP1lchNE6w
 
 ## 注意事項
 
