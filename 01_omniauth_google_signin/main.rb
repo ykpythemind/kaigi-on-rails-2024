@@ -1,6 +1,9 @@
 # 1 Googleでログインをomniauth gemを使って実装する
 #
 # how to
+#   https://console.cloud.google.com/apis/credentials/consent からOAuth同意画面を設定
+#     User Type：外部にしつつ、テストアカウントに自分のgoogleアカウントを追加
+#     スコープを追加または削除→スコープ：auth/userinfo.email, auth/userinfo.profile, openid をつける
 #   https://console.cloud.google.com/apis/credentials から認証情報を作成
 #     タイプ：Webアプリケーション
 #     リダイレクトURI： http://localhost:4567/auth/google_oauth2/callback
