@@ -43,9 +43,9 @@ app = Rack::Builder.new do
         }
       end
 
-      json = JSON.parse(response.body)
-      claims = verify_id_token(json["id_token"])
-      user_info = get_user_info(json["access_token"])
+      parsed_token_response = JSON.parse(response.body)
+      claims = verify_id_token(parsed_token_response["id_token"])
+      user_info = get_user_info(parsed_token_response["access_token"])
 
       puts "**** id_token claims ****\n#{claims}"
       puts "**** user_info ****\n#{user_info}"

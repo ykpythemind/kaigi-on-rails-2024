@@ -43,8 +43,8 @@ app = Rack::Builder.new do
         }
       end
 
-      json = JSON.parse(response.body)
-      [200, {}, [html("callback result:<br /><br />#{json}")]]
+      parsed_token_response = JSON.parse(response.body)
+      [200, {}, [html("callback result:<br /><br />#{parsed_token_response}")]]
     else
       [404, {}, [html("unexpected request to #{request.fullpath}")]]
     end
